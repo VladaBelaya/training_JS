@@ -36,11 +36,61 @@ const personalMovieDB = {
 // personalMovieDB.movies[a] = b;
 // personalMovieDB.movies[c] = d;
 
-for (let i = 0; i < 2; i++) {
+//  1 СПОСОБ
+// for (let i = 0; i < 2; i++) {
+//     const a = prompt('Один из последних просмотренных фильмов?', ''),
+//         b = prompt('На сколько оцените его?', '');
+
+
+//     if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+//         personalMovieDB.movies[a] = b;
+//         console.log('done');
+
+//     } else {
+//         console.log('error');
+//         i--;
+//     }
+
+// }
+
+// 2 СПОСОБ. ПОЛУЧИЛОСЬ НЕ ДО КОНЦА
+// let i = 0;
+// do {
+//     const a = prompt('Один из последних просмотренных фильмов?', ''),
+//         b = prompt('На сколько оцените его?', '');
+//     i++;
+//     if (i == 4) {
+//         personalMovieDB.movies[a] = b;
+//         break;
+//     }
+// }
+// while (i < 1); {
+//     const a = prompt('Один из последних просмотренных фильмов?', ''),
+//         b = prompt('На сколько оцените его?', '');
+//     personalMovieDB.movies[a] = b;
+
+//     if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+//         personalMovieDB.movies[a] = b;
+//         console.log('done');
+
+//     } else {
+//         console.log('error');
+//         i--;
+//     }
+
+// }
+
+// 3 СПОСОБ. ВСЕ КАК НАДО
+let i = 0;
+while (i < 2) {
     const a = prompt('Один из последних просмотренных фильмов?', ''),
         b = prompt('На сколько оцените его?', '');
+    i++;
+    if (i == 4) {
+        personalMovieDB.movies[a] = b;
+        break;
 
-
+    }
     if (a != null && b != null && a != '' && b != '' && a.length < 50) {
         personalMovieDB.movies[a] = b;
         console.log('done');
@@ -51,8 +101,6 @@ for (let i = 0; i < 2; i++) {
     }
 
 }
-
-
 
 personalMovieDB.count = numberOfFilms;
 switch (true) {
