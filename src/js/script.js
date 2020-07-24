@@ -111,3 +111,75 @@
 //     console.log('and me');
 // }
 // learnJS('JavaScript', done);
+
+// ОБЪЕКТЫ, ДЕСТРУКТУРИЗАЦИЯ ОБЪЕКТОВ
+
+// const options = {
+//     name: 'test',
+//     width: 1024,
+//     height: 1024,
+//     colors: {
+//         border: 'black',
+//         bg: 'red'
+//     },
+//     makeTest: function () {
+//         console.log('test');
+//     }
+// };
+// // options.makeTest();
+
+// // console.log(Object.keys(options).length); // !!!!!!ВАЖНО
+// // console.log(options.name);
+// // delete options.name;
+// // let counter = 0;
+// // for (let key in options) {
+// //     if (typeof (options[key]) === 'object') {
+// //         for (let i in options[key]) {
+// //             console.log(`свойство ${i} имеет значение ${options[key][i]}`);
+// //             counter++;
+// //         }
+// //     } else {
+// //         console.log(`свойство ${key} имеет значение ${options[key]}`);
+// //         counter++;
+
+// //     }
+// // }
+// // console.log(counter);
+
+// const {
+//     border,
+//     bg
+// } = options.colors;
+
+// МАССИВЫ И ПСЕВДОМАССИВЫ
+
+// const arr = [10, 1, 4, 123, 51];
+// arr.sort(compareNum);
+// console.log(arr);
+
+// function compareNum(a, b) {
+//     return a - b;
+// }
+// // arr.pop();
+// // arr.push(123);
+// // console.log(arr);
+
+// // 1 СПОСОБ
+// // for (let i = 0; i < arr.length; i++) {
+// //     console.log(arr[i]);
+// // }
+
+// // 2 СПОСОБ
+// // for (let value of arr) {
+// //     console.log(value);
+// // }
+
+// // 3 СПОСОБ
+// arr.forEach(function (item, i, arr) {
+//     console.log(`${i}: &{item} внутри массива ${arr}`);
+// });
+
+// const str = prompt('', '');
+// const products = str.split(', ');
+// products.sort();
+// console.log(products.join('; '));
