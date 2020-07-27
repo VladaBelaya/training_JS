@@ -266,3 +266,30 @@
 // };
 
 // const newObj = { ...q };
+
+// ОСНОВЫ ООП, ПРОТОТИПНО-ОРИЕНТИРОВАННОЕ НАСЛЕДОВАНИЕ
+// ООП- ОБЪЕКТНО-ОРИЕНТИРОВАННОЕ ПРОГРАММИРОВАНИЕ
+
+const soldier = {
+  health: 400,
+  armor: 100,
+  sayHello: function () {
+    console.log('hello');
+  }
+};
+
+// const john = {
+//   health: 100
+// };
+
+// // Устаревший формат(1 способ)
+// // john.__proto__ = soldier;
+
+// // console.log(john.armor);
+
+// Object.setPrototypeOf(john, soldier);
+
+// еще способ(современнее)
+const john = Object.create(soldier);
+
+john.sayHello();
