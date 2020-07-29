@@ -372,7 +372,7 @@
 
 // alert(null || 2 && 3 || 4); // РЕШИЛА НЕПРАВИЛЬНО
 
-// 9) 
+// 9)
 // let a = [1, 2, 3];
 // let b = [1, 2, 3];
 // console.log(a == b); // решила, но думала что равны(устно), потом поняла, что не равны при помощи решения.
@@ -388,5 +388,77 @@
 // console.log("Ёжик" > "яблоко"); // решила
 
 // 12)
-// 0 || "" || 2 || undefined || true || falsе 
+// 0 || "" || 2 || undefined || true || falsе
 // console.log(0 || "" || 2 || undefined || true || false); // решила правильно сама
+
+// ПОЛУЧЕНИЕ ЭЛЕМЕНТОВ СО СТРАНИЦЫ
+// DOM-DOCUMENT OBJECT MODULE
+
+// const box = document.getElementById('box');
+
+// console.log(box);
+
+// const buttons = document.getElementsByTagName('button');
+// console.log(buttons[1]);
+
+// const circles = document.getElementsByClassName('circle');
+// console.log(circles[1]);
+
+// const hearts = document.querySelectorAll('.heart');
+// console.log(hearts);
+
+// hearts.forEach(item => {
+//     console.log(item);
+// });
+
+// const oneHeart = document.querySelector('.heart');
+// console.log(oneHeart);
+
+// ДЕЙСТВИЯ С ЭЛЕМЕНТАМИ НА СТРАНИЦЕ
+
+// const box = document.getElementById("box"),
+//   buttons = document.getElementsByTagName("button"),
+//   circles = document.getElementsByClassName("circle"),
+//   hearts = document.querySelectorAll(".heart"),
+//   oneHeart = document.querySelector(".heart"),
+//   wrapper = document.querySelector(".wrapper");
+// box.style.backgroundColor = "blue";
+// // box.style.width = "415px";
+// box.style.cssText = "background-color: blue; width: 500px;";
+
+// buttons[1].style.borderRadius = "100%";
+// circles[0].style.backgroundColor = "red";
+
+// // for (let i = 0; i < hearts.length; i++) {
+// //   hearts[i].style.backgroundColor = "blue";
+// // }
+
+// hearts.forEach((item) => {
+//   item.style.backgroundColor = "blue";
+// });
+
+// const div = document.createElement("div");
+// // const text = document.createTextNode("Тут был я"); // используется редко
+
+// div.classList.add("black");
+
+// wrapper.append(div);
+// wrapper.appendChild(div);
+
+// // wrapper.prepend(div);
+
+// // hearts[0].before(div);
+// // circles[1].after(div);
+// wrapper.insertBefore(div, hearts[0]);
+
+// circles[0].remove();
+// wrapper.removeChild(hearts[1]);
+
+// hearts[0].replaceWith(circles[0]);
+// wrapper.replaceChild(buttons[1], hearts[1]);
+
+// div.innerHTML = "<h1>hello world</h1>";
+
+// // div.textContent = "hello";
+
+// div.insertAdjacentHTML("afterend", "<h2>hello, Andrey</h2>");
