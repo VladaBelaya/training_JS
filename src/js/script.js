@@ -462,3 +462,26 @@
 // // div.textContent = "hello";
 
 // div.insertAdjacentHTML("afterend", "<h2>hello, Andrey</h2>");
+
+// СОБЫТИЯ НА МОБИЛЬНЫХ УСТРОЙСТВАХ
+
+// touchstart
+// touchmove
+// touchend
+// touchenter
+// touchleave
+// touchcansel
+
+// window.addEventListener('DOMContentLoaded', () => {
+//     const box = document.querySelector('.box');
+
+//     box.addEventListener('touchstart', (e) => {
+//         e.preventDefault();
+
+//         console.log('Start');
+//     });
+// });
+
+// touches
+// targetTouches
+// changedTouches
