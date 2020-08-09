@@ -462,5 +462,3 @@
 // // div.textContent = "hello";
 
 // div.insertAdjacentHTML("afterend", "<h2>hello, Andrey</h2>");
-
-// СОБЫТИЯ И ИХ ОБРАБОТЧИКИ
