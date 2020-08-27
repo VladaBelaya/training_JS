@@ -1,15 +1,16 @@
 {
-  "camelcase": true,
-  "indent": 2,
-  "undef": true,
-  "quotmark": false,
-  "maxlen": 180,
-  "trailing": true,
-  "curly": true,
-  "strict": false,
+  "asi": true,
   "browser": true,
+  "camelcase": true,
+  "curly": true,
   "devel": true,
-  "jquery": true,
   "esversion": 9,
-  "node": true
+  "immed": true,
+  "indent": 2,
+  "jquery": true,
+  "maxlen": 180,
+  "node": true,
+  "quotmark": false,
+  "strict": false,
+  "trailing": true
 }
