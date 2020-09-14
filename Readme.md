@@ -17,3 +17,5 @@ https://vladabelaya.github.io/training_JS1/script2/ - теоретический
 
 https://vladabelaya.github.io/training_JS1/src/- в этом проекте, удаляется фильм при нажатии на корзину, 
 а также добавляется
+
+https://vladabelaya.github.io/training_JS1/TestWork/ - конвертер из рублей в доллары
