@@ -89,9 +89,40 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     setClock('.timer', deadline)
-})
 
-function cool() {
-    console.log('hello')
-}
-cool()
+    // Modal window
+    //     const btnModal = document.querySelectorAll('[data-modal]'),
+    //         modal = document.querySelector('.modal'),
+    //         modalCloseBtn = document.querySelector('[data-close]')
+
+    //     btnModal.forEach(i => {
+    //         i.addEventListener('click', () => {
+    //             modal.classList.toggle('modal_active')
+    //         })
+    //     })
+    // мой код
+    // правильный код
+    const btnModal = document.querySelectorAll('[data-modal]'),
+        modal = document.querySelector('.modal'),
+        modalCloseBtn = document.querySelector('[data-close]')
+
+    btnModal.forEach((btn) => {
+        btn.addEventListener('click', openModal)
+    })
+
+    function openModal() {
+
+        modal.classList.toggle('show');
+        document.body.style.overflow = 'hidden'
+        // clearInterval(modalTimerId);
+
+    }
+
+    function closeModal() {
+
+        modal.classList.toggle('show');
+        document.body.style.overflow = ''
+    }
+    modalCloseBtn.addEventListener('click', closeModal)
+
+})
