@@ -207,6 +207,16 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   modalCloseBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', e => {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+  document.addEventListener('keydown', e => {
+    if (e.code === 'Escape' && modal.classList.contains('show')) {
+      closeModal();
+    }
+  });
 });
 
 /***/ })

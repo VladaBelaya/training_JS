@@ -1,8 +1,0 @@
-{
-    "error_type": "validation",
-    "failures": {
-        "vat": ["Не правильно введен НДС номер"]
-    },
-    "message": null
-
-}
