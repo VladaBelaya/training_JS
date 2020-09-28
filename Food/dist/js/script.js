@@ -93,34 +93,34 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener("DOMContentLoaded", () => {
   // TABS
-  const tabs = document.querySelectorAll('.tabheader__item'),
-        tabsParent = document.querySelector('.tabheader__items'),
-        tabsContent = document.querySelectorAll('.tabcontent');
+  const tabs = document.querySelectorAll(".tabheader__item"),
+        tabsParent = document.querySelector(".tabheader__items"),
+        tabsContent = document.querySelectorAll(".tabcontent");
 
   function hideTabContent() {
     tabsContent.forEach(item => {
-      item.classList.add('hide');
-      item.classList.remove('show', 'fade');
+      item.classList.add("hide");
+      item.classList.remove("show", "fade");
     });
     tabs.forEach(tab => {
-      tab.classList.remove('tabheader__item_active');
+      tab.classList.remove("tabheader__item_active");
     });
   }
 
   function showTabContent(i = 0) {
-    tabsContent[i].classList.add('show', 'fade');
-    tabsContent[i].classList.remove('hide');
-    tabs[i].classList.add('tabheader__item_active');
+    tabsContent[i].classList.add("show", "fade");
+    tabsContent[i].classList.remove("hide");
+    tabs[i].classList.add("tabheader__item_active");
   }
 
   hideTabContent();
   showTabContent();
-  tabsParent.addEventListener('click', event => {
+  tabsParent.addEventListener("click", event => {
     const target = event.target;
 
-    if (target && target.classList.contains('tabheader__item')) {
+    if (target && target.classList.contains("tabheader__item")) {
       tabs.forEach((item, i) => {
         if (target == item) {
           hideTabContent();
@@ -130,7 +130,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   }); // TIMER
 
-  const deadline = '2020-11-10';
+  const deadline = "2020-11-10";
 
   function getTimeRemaining(endtime) {
     const t = Date.parse(endtime) - Date.parse(new Date()),
@@ -139,17 +139,17 @@ window.addEventListener('DOMContentLoaded', () => {
           minutes = Math.floor(t / 1000 / 60 % 60),
           seconds = Math.floor(t / 1000 % 60);
     return {
-      'total': t,
-      'days': days,
-      'hours': hours,
-      'minutes': minutes,
-      'seconds': seconds
+      total: t,
+      days: days,
+      hours: hours,
+      minutes: minutes,
+      seconds: seconds
     };
   }
 
   function getZero(num) {
     if (num >= 0 && num < 10) {
-      return '0' + num;
+      return "0" + num;
     } else {
       return num;
     }
@@ -157,10 +157,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
   function setClock(selector, endtime) {
     const timer = document.querySelector(selector),
-          days = timer.querySelector('#days'),
-          hours = timer.querySelector('#hours'),
-          minutes = timer.querySelector('#minutes'),
-          seconds = timer.querySelector('#seconds'),
+          days = timer.querySelector("#days"),
+          hours = timer.querySelector("#hours"),
+          minutes = timer.querySelector("#minutes"),
+          seconds = timer.querySelector("#seconds"),
           timeInterval = setInterval(updateClock, 1000);
     updateClock();
 
@@ -177,7 +177,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  setClock('.timer', deadline); // Modal window
+  setClock(".timer", deadline); // Modal window
   //     const btnModal = document.querySelectorAll('[data-modal]'),
   //         modal = document.querySelector('.modal'),
   //         modalCloseBtn = document.querySelector('[data-close]')
@@ -189,32 +189,32 @@ window.addEventListener('DOMContentLoaded', () => {
   // мой код
   // правильный код
 
-  const btnModal = document.querySelectorAll('[data-modal]'),
-        modal = document.querySelector('.modal'),
-        modalCloseBtn = document.querySelector('[data-close]');
+  const btnModal = document.querySelectorAll("[data-modal]"),
+        modal = document.querySelector(".modal"),
+        modalCloseBtn = document.querySelector("[data-close]");
   btnModal.forEach(btn => {
-    btn.addEventListener('click', openModal);
+    btn.addEventListener("click", openModal);
   });
 
   function openModal() {
-    modal.classList.toggle('show');
-    document.body.style.overflow = 'hidden';
+    modal.classList.toggle("show");
+    document.body.style.overflow = "hidden";
     clearInterval(modalTimerId);
   }
 
   function closeModal() {
-    modal.classList.toggle('show');
-    document.body.style.overflow = '';
+    modal.classList.toggle("show");
+    document.body.style.overflow = "";
   }
 
-  modalCloseBtn.addEventListener('click', closeModal);
-  modal.addEventListener('click', e => {
+  modalCloseBtn.addEventListener("click", closeModal);
+  modal.addEventListener("click", e => {
     if (e.target === modal) {
       closeModal();
     }
   });
-  document.addEventListener('keydown', e => {
-    if (e.code === 'Escape' && modal.classList.contains('show')) {
+  document.addEventListener("keydown", e => {
+    if (e.code === "Escape" && modal.classList.contains("show")) {
       closeModal();
     }
   });
@@ -223,11 +223,11 @@ window.addEventListener('DOMContentLoaded', () => {
   function showModalByScroll() {
     if (window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight) {
       openModal();
-      window.removeEventListener('scroll', showModalByScroll);
+      window.removeEventListener("scroll", showModalByScroll);
     }
   }
 
-  window.addEventListener('scroll', showModalByScroll);
+  window.addEventListener("scroll", showModalByScroll);
 });
 
 /***/ })
