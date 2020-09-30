@@ -145,3 +145,27 @@
 //     login == '13' ? message = 'Введите логин' :
 //     message = 'Введите логин';
 // alert(message)
+
+let avatar = document.querySelector('.avatar'),
+    pers = document.querySelectorAll('.block')
+
+pers.forEach((chemp) => {
+    chemp.addEventListener('click', () => {
+        pers.forEach(chemp => {
+            chemp.addEventListener('click', () => {
+                for (const item of pers) {
+                    item.classList.remove('click')
+                }
+                chemp.classList.add('click')
+                avatar.classList.add('click')
+            })
+
+        })
+    })
+
+})
+// if (chemp.contains != 'click') {
+//     chemp.classList.add('click')
+// } else {
+//     chemp.classList.remove('click')
+// }
