@@ -66,3 +66,19 @@
 let a = +prompt("Первое число?", 1);
 let b = +prompt("Второе число?", 2);
 alert(a + b);
+
+// Операторы сравнения
+
+const c = 5 > 4 // +
+
+const d = "ананас" > "яблоко" // -
+
+const f = "2" > "12" // +
+
+const j = undefined == null // +
+
+const k = undefined === null // -
+
+const i = null == "\n0\n" // -
+
+const y = null === +"\n0\n" // -
