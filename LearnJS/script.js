@@ -63,22 +63,39 @@
 // или
 // alert(Number(a) + Number(b));
 // или
-let a = +prompt("Первое число?", 1);
-let b = +prompt("Второе число?", 2);
-alert(a + b);
+// let a = +prompt("Первое число?", 1);
+// let b = +prompt("Второе число?", 2);
+// alert(a + b);
 
-// Операторы сравнения
+// // Операторы сравнения
 
-const c = 5 > 4 // +
+// const c = 5 > 4 // +
 
-const d = "ананас" > "яблоко" // -
+// const d = "ананас" > "яблоко" // -
 
-const f = "2" > "12" // +
+// const f = "2" > "12" // +
 
-const j = undefined == null // +
+// const j = undefined == null // +
 
-const k = undefined === null // -
+// const k = undefined === null // -
 
-const i = null == "\n0\n" // -
+// const i = null == "\n0\n" // -
 
-const y = null === +"\n0\n" // -
+// const y = null === +"\n0\n" // -
+
+// Задачи с if
+
+// if ("0") {
+//     alert('Привет');
+// } // выведется
+
+// Используя конструкцию if..else, напишите код, который будет спрашивать: „Какое «официальное» название JavaScript?“
+
+// Если пользователь вводит «ECMAScript», то показать: «Верно!», в противном случае – отобразить: «Не знаете? ECMAScript!»
+
+const question = prompt('Какое «официальное» название JavaScript?', '')
+if (question == 'ECMAScript') {
+    alert('Верно!')
+} else {
+    alert('Не знаете? ECMAScript!')
+}
