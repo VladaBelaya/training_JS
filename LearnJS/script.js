@@ -146,26 +146,116 @@
 //     message = 'Введите логин';
 // alert(message)
 
-let avatar = document.querySelector('.avatar'),
-    pers = document.querySelectorAll('.block')
+let avatar = document.querySelector(".avatar"),
+  pers = document.querySelectorAll(".block");
 
 pers.forEach((chemp) => {
-    chemp.addEventListener('click', () => {
-        pers.forEach(chemp => {
-            chemp.addEventListener('click', () => {
-                for (const item of pers) {
-                    item.classList.remove('click')
-                }
-                chemp.classList.add('click')
-                avatar.classList.add('click')
-            })
-
-        })
-    })
-
-})
+  chemp.addEventListener("click", () => {
+    pers.forEach((chemp) => {
+      chemp.addEventListener("click", () => {
+        for (const item of pers) {
+          item.classList.remove("click");
+        }
+        chemp.classList.add("click");
+        avatar.classList.add("click");
+      });
+    });
+  });
+});
 // if (chemp.contains != 'click') {
 //     chemp.classList.add('click')
 // } else {
 //     chemp.classList.remove('click')
+// }
+
+// и или задачи
+// Что выведет код ниже?
+
+// alert(null || 2 || undefined); //2 +
+
+// // Что выведет код ниже?
+
+// alert(alert(1) || 2 || alert(3)); //2 (правильно 1 а потом 2) +-
+
+// // Что выведет код ниже?
+
+// alert(1 && null && 2); // null +
+
+// // Что выведет код ниже?
+
+// alert(alert(1) && alert(2)); //1 +- потом undefiend
+
+// // Что выведет код ниже?
+
+// alert(null || (2 && 3) || 4); // 3
+
+// Напишите условие if для проверки, что переменная age находится в диапазоне между 14 и 90 включительно.
+
+// «Включительно» означает, что значение переменной age может быть равно 14 или 90.
+// let age = prompt("сколько вам лет?");
+// if (age >= 14 && age <= 90) {
+//   alert("Вы еще так молоды!");
+// } else {
+//   alert("неожиданно");
+// }
+
+// }
+// Напишите условие if для проверки, что значение переменной age НЕ находится в диапазоне 14 и 90 включительно.
+
+// Напишите два варианта: первый с использованием оператора НЕ !, второй – без этого оператора.
+// 1 вариант
+// let Age = prompt("сколько вам лет?");
+// if (Age < 14 || Age > 90) {
+//   alert("какой замечательный возраст");
+// } else {
+//   alert("super");
+// }
+// // 2 вариант
+// let AGE = prompt("сколько вам лет?");
+// if (!(AGE >= 14 && AGE <= 90)) {
+//   alert("супер возраст");
+// } else {
+//   alert("супер");
+// }
+
+// Какие из перечисленных ниже alert выполнятся?
+
+// Какие конкретно значения будут результатами выражений в условиях if(...)?
+// if (-1 || 0) {
+//   alert("first"); // false не выполнится (выполнится, потому что -1=true)
+// }
+// if (-1 && 0) {
+//   alert("second"); // 0 не выполнится
+// }
+// if (null || (-1 && 1)) {
+//   alert("third"); // 1 true выполнится
+// }
+// // Напишите код, который будет спрашивать логин с помощью prompt.
+
+// Если посетитель вводит «Админ», то prompt запрашивает пароль, если ничего не введено или нажата клавиша Esc – показать «Отменено», в противном случае отобразить «Я вас не знаю».
+
+// Пароль проверять так:
+
+// Если введён пароль «Я главный», то выводить «Здравствуйте!»,
+// Иначе – «Неверный пароль»,
+// При отмене – «Отменено».
+const user = prompt("Введите логин");
+
+if (user == "Админ") {
+  let password = prompt("Введите пароль");
+  if (password == "Я главный") {
+    alert("hello");
+  } else if (password == "" || user == null) {
+    alert("Отменено");
+  } else {
+    alert("неверный пароль");
+  }
+}
+if (user == "" || user == null) {
+  alert("Отменено");
+} else if (user !== "Админ") {
+  alert("я вас не знаю");
+}
+// else  {
+// alert("я вас не знаю");
 // }
