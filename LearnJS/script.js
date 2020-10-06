@@ -533,20 +533,47 @@ pers.forEach((chemp) => {
 // pow(1, 100) = 1 * 1 * ...* 1 = 1
 // Создайте страницу, которая запрашивает x и n, а затем выводит результат pow(x,n).
 
-function pow(x, n) {
-  result = x;
-  for (let i = 1; i < n; i++) {
-    result *= x;
-  }
-  return result;
-}
-let x = prompt("Введите число x");
-let n = prompt("Введите число n");
+// function pow(x, n) {
+//   result = x;
+//   for (let i = 1; i < n; i++) {
+//     result *= x;
+//   }
+//   return result;
+// }
+// let x = prompt("Введите число x");
+// let n = prompt("Введите число n");
 
-if (n < 1) {
-  alert(
-    `Степень ${n} не поддерживается, используйте натуральное число, т.е. >=1`
-  );
-} else {
-  alert(pow(x, n));
+// if (n < 1) {
+//   alert(
+//     `Степень ${n} не поддерживается, используйте натуральное число, т.е. >=1`
+//   );
+// } else {
+//   alert(pow(x, n));
+// }
+// Замените код Function Expression стрелочной функцией:
+
+// function ask(question, yes, no) {
+//   if (confirm(question)) yes();
+//   else no();
+// }
+
+// ask(
+//   "Вы согласны?",
+//   function () {
+//     alert("Вы согласились.");
+//   },
+//   function () {
+//     alert("Вы отменили выполнение.");
+//   }
+// );
+
+// const ask = (question, yes, no) => (confirm(question) ? yes() : no());
+function ask(question, yes, no) {
+  if (confirm(question)) yes();
+  else no();
 }
+ask(
+  "вы согласны?",
+  () => alert("Вы согласились."),
+  () => alert("Вы отменили выполнение.")
+);
