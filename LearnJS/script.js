@@ -669,9 +669,9 @@ pers.forEach((chemp) => {
 // for (i; i < 68; i++) {
 //   console.log(i);
 // }
-let i = 45;
-for (i; i <= 670; i++) {
-  if (i % 10 === 0) {
-    console.log(i);
-  }
-}
+// let i = 45;
+// for (i; i <= 670; i++) {
+//   if (i % 10 === 0) {
+//     console.log(i);
+//   }
+// }
