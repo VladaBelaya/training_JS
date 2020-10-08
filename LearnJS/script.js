@@ -744,3 +744,15 @@ pers.forEach((chemp) => {
 //   return a * b;
 // }
 // alert(m(3, 8));
+
+// моя функция
+function num() {
+  for (let a = 2; a < 20; a++) {
+    if (a % 2 == 1) {
+      alert(a);
+    } else {
+      continue;
+    }
+  }
+}
+num();
