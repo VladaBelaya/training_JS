@@ -702,3 +702,14 @@ pers.forEach((chemp) => {
 //   return n * m;
 // }
 // alert(mul(5, 6));
+
+// Создайте функцию repeat(str, n), которая возвращает строку, состоящую и n повторений строки str. n — по умолчанию 2, str — пустая строка
+
+function repeat(str, n) {
+  for (n = 2; n < 5; n++) {
+    alert(str);
+  }
+  return str;
+}
+
+repeat("");
