@@ -39,3 +39,26 @@
     background-color: #fff;
 
 }
+
+h2 {
+    font-size: 30px;
+    color: rgb(78, 75, 255);
+    margin: 10px;
+}
+
+input {
+    font-size: 20px;
+    color: #f19100;
+    margin: 10px;
+}
+
+ul {
+    margin: 10px;
+}
+
+li {
+    font-size: 20px;
+    color: rgba(50, 112, 0, 0.692);
+    margin: 10px 20px;
+    list-style-type: none;
+}
