@@ -746,13 +746,47 @@ pers.forEach((chemp) => {
 // alert(m(3, 8));
 
 // моя функция
-function num() {
-  for (let a = 2; a < 20; a++) {
-    if (a % 2 == 1) {
-      alert(a);
-    } else {
-      continue;
-    }
-  }
-}
-num();
+// function num() {
+//   for (let a = 2; a < 20; a++) {
+//     if (a % 2 == 1) {
+//       alert(a);
+//     } else {
+//       continue;
+//     }
+//   }
+// }
+// num();
+
+// let num =  123
+// alert(num)
+// let a =1, b = 3
+
+// let f,c
+// f = 2
+// c = 4
+// let a = 10,
+//     b = 2
+// alert(a + b)
+// alert(a - b)
+// alert(a * b)
+// alert(a / b)
+
+// let a = 10,
+// b = 5,
+// result = a + b
+
+// alert(result)
+
+// let hourDay = 60 * 60 * 24
+// let mounth = hourDay * 30
+// let yearSec = hourDay * 365
+
+// alert(yearSec)
+// let a = (-'5') + (-'2');
+// alert(typeof a);
+
+// let a = parseInt('5px') + parseInt('5px')
+// alert(a)
+// alert( String(true) + Number(true) );
+let test = Boolean(3 * 'abc');
+alert(test);
