@@ -887,5 +887,9 @@ pers.forEach((chemp) => {
 
 // console.log(a) // 20
 
-let a =  b =  c = 20
-console.log(b)
+// let a =  b =  c = 20
+// console.log(b)
+
+// Спросите возраст пользователя с помощью функции prompt. Выведите с помощью alert введенный пользователем возраст.
+
+alert(prompt('Сколько Вам лет?'))
