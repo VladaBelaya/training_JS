@@ -880,9 +880,12 @@ pers.forEach((chemp) => {
 // alert(--num2); // выведет 3 и 3
 
 // let a, b , c = 20
-//  console.log(a)
- let a, b, c;
+//  console.log(a) // undefiend
+//  let a, b, c;
 
-a = b = c = 20
+// a = b = c = 20
 
-console.log(a)
+// console.log(a) // 20
+
+let a =  b =  c = 20
+console.log(b)
