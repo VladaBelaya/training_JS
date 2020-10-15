@@ -788,5 +788,19 @@ pers.forEach((chemp) => {
 // let a = parseInt('5px') + parseInt('5px')
 // alert(a)
 // alert( String(true) + Number(true) );
-let test = Boolean(3 * 'abc');
-alert(test);
+// let test = Boolean(3 * 'abc');
+// alert(test);
+
+//  символ в переменной
+// let str = 'abcde'
+// // console.log(str[0])
+// // console.log(str[2])
+// // console.log(str[4])
+// // console.log(str[4])
+// // console.log(str[3])
+// // console.log(str[2])
+// // console.log(str[1])
+// // console.log(str[0])
+// let num = 3
+// console.log(str[num])
+
