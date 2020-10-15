@@ -822,3 +822,8 @@ pers.forEach((chemp) => {
 // num++;
 // num--;
 // console.log(num);
+
+// Не запуская код, определите, что выведется на экран:
+
+// let num = 3;
+// alert(++num);
