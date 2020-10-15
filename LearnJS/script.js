@@ -803,4 +803,15 @@ pers.forEach((chemp) => {
 // // console.log(str[0])
 // let num = 3
 // console.log(str[num])
+// let str = 'fhggvbkhkfgd'
+// console.log(str[str.length - 1])
+
+// Переделайте этот код так, чтобы в нем использовались описанные сокращенные операции:
+
+// let num = 47;
+// num += 7
+// num -= 18
+// num *= 10
+// num /= 15
+// console.log(num)
 
