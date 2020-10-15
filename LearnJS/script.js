@@ -815,3 +815,10 @@ pers.forEach((chemp) => {
 // num /= 15
 // console.log(num)
 
+// Переделайте этот код так, чтобы в нем операции инкремента и декремента:
+
+// let num = 10;
+// num++
+// num++;
+// num--;
+// console.log(num);
