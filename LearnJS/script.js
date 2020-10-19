@@ -917,8 +917,12 @@ pers.forEach((chemp) => {
 
 // Массивы
 // Создайте массив с элементами 'a', 'b', 'c'. Выведите на экран каждый из этих элементов.
-const arr = ['a', 'b', 'c']
-console.log(arr[0])
-console.log(arr[1])
-console.log(arr[2])
+// const arr = ['a', 'b', 'c']
+// console.log(arr[0])
+// console.log(arr[1])
+// console.log(arr[2])
 
+// Создайте массив с элементами 'a', 'b', 'c', 'd'. Выведите с его помощью на экран строку 'a+b+c+d'
+
+const arr = ['a', 'b', 'c', 'd']
+alert(`${arr[0]} + ${arr[1]} + ${arr[2]} + ${arr[3]}`)
