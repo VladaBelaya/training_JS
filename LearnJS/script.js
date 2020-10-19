@@ -1065,3 +1065,13 @@ pers.forEach((chemp) => {
 //   patronymic: 'Вячеславовна'
 // }
 // alert(`${user.surname  + ' ' + user.name + ' ' +  user.patronymic}`)
+
+// Создайте объект date (дата) с ключами year (год), month (месяц) и day (день) и 
+// значениями, соответствующими текущему дню. Выведите созданную дату на экран в формате 'год-месяц-день'.
+
+// const date = {
+//   year: 2020,
+//   month: 10,
+//   day: 19
+// }
+// alert(`${date.day}-${date.month}-${date.year}`)
