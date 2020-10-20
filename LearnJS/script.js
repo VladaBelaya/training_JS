@@ -1503,3 +1503,11 @@ pers.forEach((chemp) => {
 // } else {
 //   console.log('неверно')
 // }
+
+// Если переменная test равна false, то выведите на экран слово 'верно', иначе выведите слово 'неверно'.
+// const test = false
+// if (test === false) {
+//   console.log('верно')
+// } else {
+//   console.log('неверно')
+// }
