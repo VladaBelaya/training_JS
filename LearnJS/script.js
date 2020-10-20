@@ -1128,3 +1128,10 @@ pers.forEach((chemp) => {
 // let arr = ['1', '2', '3'];
 // console.log( typeof arr[0] ); //string
 
+// Не запуская код, определите, что выведется на экран в консоль:
+
+// console.log( Array.isArray([1, 2, 3]) ); // + true
+
+// Не запуская код, определите, что выведется на экран в консоль:
+
+// console.log( Array.isArray({a: 1, b: 2, c: 3}) ); // - false
