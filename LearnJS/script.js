@@ -1907,3 +1907,30 @@ let test = 0
 // console.log(result); // verno
 
 
+// Определите, что выведет приведенный код:
+
+// let num = 1;
+		
+// if (num == 1) {
+// 	let result = 'верно';
+// } else {
+// 	let result = 'неверно';
+// }
+
+// console.log(result); // result is not defiend
+
+// Примеры использования if-else в JavaScript
+// Четверть часа
+
+// Решите аналогичную задачу, только определите в какую треть часа попадает указанное количество минут.
+
+// let min = 21
+// if (min >= 1 && min <= 20) {
+//   console.log('1 четверть')
+// } else if (min >= 21 && min <= 40) {
+//   console.log('2 четверть')
+// } else if (min >= 41 && min <= 60) {
+//   console.log('3 четверть')
+// } else {
+//   console.log('Введите любое количество минут в пределах часа')
+// }
