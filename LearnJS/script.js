@@ -1696,10 +1696,30 @@ pers.forEach((chemp) => {
 // 
 // Не запуская код, определите, что выведется на экран:
 
-let test = false;
+// let test = false;
 
-if (test) {
-	alert('верно');
-} else {
-	alert('неверно');
-} // neverno
+// if (test) {
+// 	alert('верно');
+// } else {
+// 	alert('неверно');
+// } // neverno
+
+// // Не запуская код, определите, что выведется на экран:
+
+// let test;
+
+// if (test) {
+// 	alert('верно');
+// } else {
+// 	alert('неверно');
+// } // neverno
+
+// Не запуская код, определите, что выведется на экран:
+
+// let test = 0;
+
+// if (test) {
+// 	alert('верно');
+// } else {
+// 	alert('неверно');
+// } // neverno
