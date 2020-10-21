@@ -1946,3 +1946,16 @@ let test = 0
 // } else {
 //   console.log('error')
 // }
+
+// Проверка символа строки
+
+// Проверка символа числа
+// Дано целое число. Напишите условие, которое проверит, равна ли последняя цифра этого числа нулю.
+// let num = String(1234)
+// // console.log(typeof num)
+
+// if(num[num.length - 1] == 0) {
+//   console.log('verno')
+// } else {
+//   console.log('neverno')
+// }
