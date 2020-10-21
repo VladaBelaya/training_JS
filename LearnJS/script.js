@@ -1683,3 +1683,23 @@ pers.forEach((chemp) => {
 // } else {
 // 	alert('неверно');
 // } // neverno
+
+// Не запуская код, определите, что выведется на экран:
+
+// let test = null;
+
+// if (test) {
+// 	alert('верно');
+// } else {
+// 	alert('неверно');
+// } // neverno
+// 
+// Не запуская код, определите, что выведется на экран:
+
+let test = false;
+
+if (test) {
+	alert('верно');
+} else {
+	alert('неверно');
+} // neverno
