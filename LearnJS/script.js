@@ -1891,3 +1891,19 @@ let test = 0
 // }
 
 // console.log(result);
+
+// Область видимости var
+
+// Определите, что выведет приведенный код:
+
+// let num = 1;
+		
+// if (num == 1) {
+// 	var result = 'верно';
+// } else {
+// 	var result = 'неверно';
+// }
+
+// console.log(result); // verno
+
+
