@@ -1971,3 +1971,13 @@ let test = 0
 // } else {
 //   console.log('нечетное число')
 // }
+
+// Дано число. Проверьте, что оно делится на 3.
+
+// let num = 15
+// let result = num % 3
+// if (result == 0) {
+//   console.log('Ответ: ' + num/3)
+// } else {
+//   console.log('Не делится на 3 без остатка')
+// }
