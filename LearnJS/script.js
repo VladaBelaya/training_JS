@@ -2017,3 +2017,9 @@ let test = 0
 // } else {
 //     console.log('no')
 //   }
+
+// Дано трехзначное число. Найдите сумму цифр этого числа.
+// let num = String(123)
+// if(num[0] == 1 && num[1] == 2 && num[2] == 3) {
+//   console.log(+num[0] + +num[1] + +num[2])
+// }
