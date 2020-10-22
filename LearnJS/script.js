@@ -2206,3 +2206,20 @@ let test = 0
 //   result = result * i
 // }
 // console.log(result)
+
+// Найдите сумму четных чисел от 2 до 100.
+
+// let result = 0
+
+// for (let i = 2; i <= 100; i+= 2) {
+//   result = result + i
+// }
+// console.log(result)
+
+// let result = 0;
+
+// for (let i = 1; i <= 100; i++) {
+// 	result = result + i;
+// }
+
+// console.log(result); 
