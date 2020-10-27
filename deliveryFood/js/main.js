@@ -14,7 +14,8 @@ function toggleModal() {
 const buttonAuth = document.querySelector('.button-auth'),
       modalAuth =  document.querySelector('.modal-auth'),
       closeAuth = document.querySelector('.close-auth'),
-      loginForm = document.querySelector('#loginForm')
+      loginForm = document.querySelector('#loginForm'),
+      loginInput = 
 
 let login = ''
 
@@ -34,7 +35,8 @@ function notAuthorized () {
   closeAuth.addEventListener('click', toggleModalAuth);
   loginForm.addEventListener('submit', logIn) //submit -отправка данных 
 
-  function logIn () {
+  function logIn (event) {
+    event.preventDefault()
     console.log('login')
   }
 }
