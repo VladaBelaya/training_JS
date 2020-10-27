@@ -29,7 +29,11 @@ function toggleModalAuth () {
 
 function autрorized () {
   console.log('Авторизован')
+
+  userName.textContent = login
   buttonAuth.style.display = 'none'
+  userName.style.display = 'inline'
+  buttonOut.style.display = 'block'
 }
 function notAuthorized () {
   console.log('не авторизован')
