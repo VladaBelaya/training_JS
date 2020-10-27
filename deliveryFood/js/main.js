@@ -28,12 +28,23 @@ function toggleModalAuth () {
 
 
 function autрorized () {
+  function logOut() {
+    login = ''
+    checkAuth()
+
+    buttonAuth.style.display = 'block'
+    userName.style.display = 'none'
+    buttonOut.style.display = 'none'
+  }
+
   console.log('Авторизован')
 
   userName.textContent = login
-  buttonAuth.style.display = 'none'
-  userName.style.display = 'inline'
-  buttonOut.style.display = 'block'
+  buttonAuth.style.display = ''
+  userName.style.display = ''
+  buttonOut.style.display = ''
+
+  buttonOut.addEventListener('click', logOut)
 }
 function notAuthorized () {
   console.log('не авторизован')
