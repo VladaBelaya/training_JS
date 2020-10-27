@@ -57,13 +57,7 @@ function notAuthorized () {
   buttonAuth.addEventListener('click', toggleModalAuth)
   closeAuth.addEventListener('click', toggleModalAuth);
   loginForm.addEventListener('submit', logIn) //submit -отправка данных 
-  
-
- 
-  function logIn (event) {
-    event.preventDefault()
-    login = loginInput.value 
-   function notCloseModal(event) {
+  function notCloseModal(event) {
     if(!login) {
       alert('введите логин')
      event.preventDefault('')
@@ -71,6 +65,12 @@ function notAuthorized () {
     } 
    }
    buttonLogin.addEventListener('click', notCloseModal) 
+
+ 
+  function logIn (event) {
+    event.preventDefault()
+    login = loginInput.value 
+   
     localStorage.setItem('DeliveryFood', login)
     toggleModalAuth()
     buttonAuth.removeEventListener('click', toggleModalAuth)
