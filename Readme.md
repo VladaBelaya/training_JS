@@ -22,3 +22,5 @@ https://vladabelaya.github.io/training_JS1/src/- в этом проекте, у�
 https://vladabelaya.github.io/training_JS1/TestWork/ - конвертер из рублей в доллары
 
 https://vladabelaya.github.io/training_JS1/LearnJS/ - здесь я выполняю задачи из учебника learnJS
+
+https://vladabelaya.github.io/training_JS1/deliveryFood/ - здесь проект интенсива glo academy
