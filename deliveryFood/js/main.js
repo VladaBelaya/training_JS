@@ -39,6 +39,7 @@ function notAuthorized () {
     event.preventDefault()
     login = loginInput.value 
     toggleModalAuth()
+    checkAuth()
   }
 }
 
@@ -49,3 +50,5 @@ function checkAuth() {
     notAuthorized()
   }  
 }
+
+checkAuth()
