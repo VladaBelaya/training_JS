@@ -13,7 +13,8 @@ function toggleModal() {
 // day 1
 const buttonAuth = document.querySelector('.button-auth'),
       modalAuth =  document.querySelector('.modal-auth'),
-      closeAuth = document.querySelector('.close-auth')
+      closeAuth = document.querySelector('.close-auth'),
+      loginForm = document.querySelector('#loginForm')
 
 
       
