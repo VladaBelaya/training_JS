@@ -8,11 +8,11 @@ window.disableScroll = function() {
     left: 0;
     top: ${-window.scrollY}px;
     width: 100%;
-    padding-right: ${widthScroll}px
+    padding-right: ${widthScroll}px;
     `
 }
 
 window.enableScroll = function() {
-    document.body.style.cssText = ``
+    document.body.style.cssText = `position: relative;`
     window.scroll({top: document.body.dbscroll})
 }
