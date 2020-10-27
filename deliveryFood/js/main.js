@@ -17,9 +17,10 @@ const buttonAuth = document.querySelector('.button-auth'),
       loginForm = document.querySelector('#logInForm'),
       loginInput = document.querySelector('#login'),
       userName = document.querySelector('.user-name'),
-      buttonOut = document.querySelector('.button-out')
+      buttonOut = document.querySelector('.button-out'),
+      buttonLogin = document.querySelector('.button-login')
 
-let login = ''
+let login = localStorage.getItem('DeliveryFood')
 
       
 function toggleModalAuth () {
@@ -30,19 +31,23 @@ function toggleModalAuth () {
 function autрorized () {
   function logOut() {
     login = ''
-    checkAuth()
+    localStorage.removeItem('DeliveryFood')
+    buttonAuth.style.display = ''
+    userName.style.display = ''
+    buttonOut.style.display = ''
+    buttonOut.removeEventListener('click', logOut)
 
-    buttonAuth.style.display = 'block'
-    userName.style.display = 'none'
-    buttonOut.style.display = 'none'
+
+    checkAuth()
   }
 
   console.log('Авторизован')
 
   userName.textContent = login
-  buttonAuth.style.display = ''
-  userName.style.display = ''
-  buttonOut.style.display = ''
+
+  buttonAuth.style.display = 'none'
+  userName.style.display = 'inline'
+  buttonOut.style.display = 'block'
 
   buttonOut.addEventListener('click', logOut)
 }
@@ -52,11 +57,26 @@ function notAuthorized () {
   buttonAuth.addEventListener('click', toggleModalAuth)
   closeAuth.addEventListener('click', toggleModalAuth);
   loginForm.addEventListener('submit', logIn) //submit -отправка данных 
+  
 
+ 
   function logIn (event) {
     event.preventDefault()
     login = loginInput.value 
+   function notCloseModal(event) {
+    if(!login) {
+      alert('введите логин')
+     event.preventDefault('')
+      modalAuth.classList.add('madal-auth')
+    } 
+   }
+   buttonLogin.addEventListener('click', notCloseModal) 
+    localStorage.setItem('DeliveryFood', login)
     toggleModalAuth()
+    buttonAuth.removeEventListener('click', toggleModalAuth)
+    closeAuth.removeEventListener('click', toggleModalAuth);
+    loginForm.removeEventListener('submit', logIn)
+    loginForm.reset()
     checkAuth()
   }
 }
@@ -70,3 +90,4 @@ function checkAuth() {
 }
 
 checkAuth()
+
