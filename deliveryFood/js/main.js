@@ -57,8 +57,13 @@ function notAuthorized () {
   buttonAuth.addEventListener('click', toggleModalAuth)
   closeAuth.addEventListener('click', toggleModalAuth);
   loginForm.addEventListener('submit', logIn) //submit -отправка данных 
+  modalAuth.addEventListener('click', function (event){
+    if (event.target.classList.contains('is-open')){
+      toggleModalAuth()
+    }
+  })
   function notCloseModal(event) {
-    if(loginInput.value === '') {
+    if(loginInput.value.trim() === '') {
       alert('введите логин')
      event.preventDefault('')
       modalAuth.classList.add('madal-auth')
