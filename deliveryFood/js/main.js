@@ -25,7 +25,13 @@ let login = localStorage.getItem('DeliveryFood')
       
 function toggleModalAuth () {
   modalAuth.classList.toggle('is-open')
+  if (modalAuth.classList.contains('is-open')) {
+    disableScroll()
+  } else {
+    enableScroll()
+  }
 }
+
 
 
 function autрorized () {
