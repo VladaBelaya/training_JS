@@ -15,7 +15,9 @@ const buttonAuth = document.querySelector('.button-auth'),
       modalAuth =  document.querySelector('.modal-auth'),
       closeAuth = document.querySelector('.close-auth'),
       loginForm = document.querySelector('#logInForm'),
-      loginInput = document.querySelector('#login')
+      loginInput = document.querySelector('#login'),
+      userName = document.querySelector('.user-name'),
+      buttonOut = document.querySelector('.button-out')
 
 let login = ''
 
@@ -27,6 +29,7 @@ function toggleModalAuth () {
 
 function autрorized () {
   console.log('Авторизован')
+  buttonAuth.style.display = 'none'
 }
 function notAuthorized () {
   console.log('не авторизован')
