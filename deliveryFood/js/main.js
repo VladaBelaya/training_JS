@@ -15,10 +15,25 @@ const buttonAuth = document.querySelector('.button-auth'),
       modalAuth =  document.querySelector('.modal-auth'),
       closeAuth = document.querySelector('.close-auth')
 
-buttonAuth.addEventListener('click', toggleModalAuth)
-closeAuth.addEventListener('click', toggleModalAuth);
+
       
 function toggleModalAuth () {
   modalAuth.classList.toggle('is-open')
 }
 
+
+function autрorized () {
+  console.log('Авторизован')
+}
+function notAuthorized () {
+  console.log('не авторизован')
+
+  buttonAuth.addEventListener('click', toggleModalAuth)
+  closeAuth.addEventListener('click', toggleModalAuth);
+}
+
+if (авторизован) {
+  autрorized()
+} else {
+  notAuthorized()
+}
