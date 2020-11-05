@@ -2361,11 +2361,21 @@ let test = 0
 
 // Дан массив с числами. Числа могут быть положительными и отрицательными. Найдите сумму положительных элементов массива.
 
-let arr = [-1, -2, 3, 4, 5]
-let result = 0
-for (let i = 0; i < arr.length; i++) {
-  if(arr[i] > 0) {
-    result += arr[i]
-  }
-}
-console.log(result)
+// let arr = [-1, -2, 3, 4, 5]
+// let result = 0
+// for (let i = 0; i < arr.length; i++) {
+//   if(arr[i] > 0) {
+//     result += arr[i]
+//   }
+// }
+// console.log(result)
+
+// Дан массив arr. Найдите среднее арифметическое его элементов (сумма делить на количество). Проверьте задачу на массиве с элементами 1, 2, 3, 4, 5.
+
+// let arr = [1, 2, 3, 4, 5]
+// let result = 0
+
+// for (let i = 0; i < arr.length; i++) {
+//  result += arr[i]
+// }
+// console.log(result / 5)
