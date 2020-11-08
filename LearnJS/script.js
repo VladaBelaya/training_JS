@@ -2430,7 +2430,7 @@ let strData = ''
 let liLast = document.createElement('li');
 let button = document.createElement('button')
 button.style.display = 'block'
-
+const date = new Date().toLocaleDateString()
 data.forEach(e => {
  
 
@@ -2448,23 +2448,26 @@ button.addEventListener('click', delTask)
 ul.innerHTML = strData
 
 btn.addEventListener('click', addTask)
+btn.addEventListener('click', addInArr)
 
 function addTask () {
+ 
+  liLast.innerHTML = `${input.value} <br>${date}`
+  button.innerHTML = 'del'
+  liLast.appendChild(button)
+  ul.append(liLast); 
+ }
+ 
+function addInArr () {
   let obj = {
     task: input.value,
     status: false,
     createDate: new Date().toLocaleDateString()
    }
-  liLast.innerHTML = `${input.value} <br>${obj.createDate}`
-  button.innerHTML = 'del'
-  liLast.appendChild(button)
-  ul.append(liLast); 
-
    data.push(obj)
    input.value = ''
- }
- 
 
+}
 
 function delTask () {
 liLast.parentNode.removeChild(liLast)
