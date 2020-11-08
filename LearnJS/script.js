@@ -2419,6 +2419,7 @@ let test = 0
 const input = document.querySelector('#input')
 const ul = document.querySelector('ul')
 const btn = document.querySelector('button')
+const date = new Date().toLocaleDateString()
 const data = [
   {task: 'Сгенерировть проект', status: false, createDate: '16.10.2020'},
   {task: 'Создать компоненты', status: false, createDate: '16.10.2020'},
@@ -2430,25 +2431,21 @@ let strData = ''
 let liLast = document.createElement('li');
 let button = document.createElement('button')
 button.style.display = 'block'
-const date = new Date().toLocaleDateString()
 data.forEach(e => {
- 
-
   strData += `<li>
     <div>${e.task}</div>
     
     <div>${e.createDate}</div>
     <button>del</button>
     </li>
-    `
-    
-button.addEventListener('click', delTask)
-    
+    ` 
 })
 ul.innerHTML = strData
 
+button.addEventListener('click', delTask)
 btn.addEventListener('click', addTask)
-btn.addEventListener('click', addInArr)
+btn.addEventListener('click', addInArr)   
+
 
 function addTask () {
  
@@ -2466,10 +2463,10 @@ function addInArr () {
    }
    data.push(obj)
    input.value = ''
+   console.log(data)
 
 }
 
 function delTask () {
 liLast.parentNode.removeChild(liLast)
 }
-console.log(data)
