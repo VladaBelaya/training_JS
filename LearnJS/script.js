@@ -2417,7 +2417,7 @@ let test = 0
 
 
 const data = [
-  {task: 'Сгенерировть проект', status: true, createDate: '16.10.2020'},
+  {task: 'Сгенерировать проект', status: true, createDate: '16.10.2020'},
   {task: 'Создать компоненты', status: true, createDate: '16.10.2020'},
   {task: 'Описать роутинг', status: true, createDate: '16.10.2020'},
   {task: 'Завершить приложение', status: false, createDate: '16.10.2020'},
@@ -2436,14 +2436,15 @@ btn.addEventListener('click', add)
   function render() {
     strData = ''
     data.forEach((x, i) => {
-      strData += `<li>
-      <div>${x.task}</div>
-      <div>${x.createDate}</div>
-      <input type="checkbox" ${x.status ? 'checked="true"': ''}">
-      <button data-btn="${i}">Х</button>
-      </li>
+      strData += `<li ${x.status ? 
+        'style="text-decoration: line-through"': 
+        'style="text-decoration: none'}">
+            <div>${x.task}</div>
+            <div>${x.createDate}</div>
+            <input type="checkbox" ${x.status ? 'checked="true"': ''}">
+            <button data-btn="${i}">Х</button>
+         </li>
       `
-  
     })
   ul.innerHTML = strData
   }
