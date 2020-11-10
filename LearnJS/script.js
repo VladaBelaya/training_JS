@@ -2416,57 +2416,54 @@ let test = 0
 // }
 
 
-const input = document.querySelector('#input')
-const ul = document.querySelector('ul')
-const btn = document.querySelector('button')
-const date = new Date().toLocaleDateString()
 const data = [
-  {task: 'Сгенерировть проект', status: false, createDate: '16.10.2020'},
-  {task: 'Создать компоненты', status: false, createDate: '16.10.2020'},
-  {task: 'Описать роутинг', status: false, createDate: '16.10.2020'},
+  {task: 'Сгенерировть проект', status: true, createDate: '16.10.2020'},
+  {task: 'Создать компоненты', status: true, createDate: '16.10.2020'},
+  {task: 'Описать роутинг', status: true, createDate: '16.10.2020'},
   {task: 'Завершить приложение', status: false, createDate: '16.10.2020'},
 ]
 
-let strData = ''
-let liLast = document.createElement('li');
-let button = document.createElement('button')
-button.style.display = 'block'
-data.forEach(e => {
-  strData += `<li>
-    <div>${e.task}</div>
-    
-    <div>${e.createDate}</div>
-    <button>del</button>
-    </li>
-    ` 
+const input = document.querySelector('#input')
+const ul = document.querySelector('ul')
+const btn = document.querySelector('button')
+const checkbox = document.querySelector('#checkbox')
+let strData
+
+render()
+
+btn.addEventListener('click', add)
+
+  function render() {
+    strData = ''
+    data.forEach((x, i) => {
+      strData += `<li>
+      <div>${x.task}</div>
+      <div>${x.createDate}</div>
+      <input type="checkbox" ${x.status ? 'checked="true"': ''}">
+      <button data-btn="${i}">Х</button>
+      </li>
+      `
+  
+    })
+  ul.innerHTML = strData
+  }
+
+function add() {
+  if (input.value.trim()) {
+    const todo = {
+      task: input.value,
+      status: false,
+      createDate: new Date().toLocaleDateString()
+    }
+    data.push(todo)
+    render()
+  }  
+  input.value = ''
+}
+
+ul.addEventListener('click', event => {
+  if (event.target.dataset.btn) {
+    data.splice(event.target.dataset.btn, 1)
+    render()
+  }
 })
-ul.innerHTML = strData
-
-button.addEventListener('click', delTask)
-btn.addEventListener('click', addTask)
-btn.addEventListener('click', addInArr)   
-
-
-function addTask () {
- 
-  liLast.innerHTML = `${input.value} <br>${date}`
-  button.innerHTML = 'del'
-  liLast.appendChild(button)
-  ul.append(liLast); 
- }
- 
-function addInArr () {
-  let obj = {
-    task: input.value,
-    status: false,
-    createDate: new Date().toLocaleDateString()
-   }
-   data.push(obj)
-   input.value = ''
-   console.log(data)
-
-}
-
-function delTask () {
-liLast.parentNode.removeChild(liLast)
-}
