@@ -2416,6 +2416,8 @@ let test = 0
 // }
 
 
+// TO DO LIST
+
 const data = [
   {task: 'Сгенерировать проект', status: true, createDate: '16.10.2020'},
   {task: 'Создать компоненты', status: true, createDate: '16.10.2020'},
@@ -2436,14 +2438,15 @@ btn.addEventListener('click', add)
   function render() {
     strData = ''
     data.forEach((x, i) => {
-      strData += `<li ${x.status ? 
-        'style="text-decoration: line-through"': 
-        'style="text-decoration: none'}">
-            <div>${x.task}</div>
+      strData += `<li >
+            <div ${x.status ? 
+              'style="text-decoration: line-through"': 
+              'style="text-decoration: none'}">${x.task}</div>
             <div>${x.createDate}</div>
             <input type="checkbox" ${x.status ? 'checked="true"': ''}">
             <button data-btn="${i}">Х</button>
          </li>
+        
       `
     })
   ul.innerHTML = strData
@@ -2468,3 +2471,63 @@ ul.addEventListener('click', event => {
     render()
   }
 })
+
+
+//  ИНТЕРПОЛЯЦИЯ. УРОК 8
+
+// const category = 'toys'
+
+// // console.log('https:someurl.come/' + category) // канкотинация. то есть складывание строк. старый стандарт
+
+// console.log(`https://someurl.come/${category}`) // интерполяция
+
+// const user = prompt('Как Вас зовут?')
+// alert(`Welcome ${user}!`)
+
+// ОПЕРАТОРЫ В JS
+
+// let incr = 10,
+//     decr = 10
+
+// // incr++
+// // decr--
+
+// console.log(incr++)
+// console.log(--decr)
+
+// const isChecked = false,
+//       isClose = true
+
+// console.log(isChecked && isClose)
+
+// ПРАКТИКА. ЧАСТЬ 1
+
+// const numberOfFilm = +prompt('Сколько фильмов Вы уже посмотрели?'),
+//     personalMovieDB = {
+//       count: numberOfFilm,
+//       movies: {},
+//       actors: {},
+//       genres: [],
+//       privat: false
+//     }
+// let lastFilm;
+// let  rating; 
+
+
+// for (let i = 0; i < 2; i++ ) {
+//   lastFilm  = prompt('Один из последних просмотренных фильмов?')
+//   rating  = +prompt('На сколько оцените его?');
+// let a = lastFilm,
+//     b = rating
+//     personalMovieDB.movies[lastFilm] = rating
+//     personalMovieDB.movies[a] = b
+// }
+
+
+
+// console.log(personalMovieDB)
+
+
+
+
+// УСЛОВИЯ
