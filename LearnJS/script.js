@@ -2502,47 +2502,62 @@ ul.addEventListener('click', event => {
 
 // ПРАКТИКА. ЧАСТЬ 1, ЧАСТЬ 2
 
-// const numberOfFilm = +prompt('Сколько фильмов Вы уже посмотрели?'),
-//     personalMovieDB = {
-//       count: numberOfFilm,
-//       movies: {},
-//       actors: {},
-//       genres: [],
-//       privat: false
-//     }
+let numberOfFilm;
+let personalMovieDB = {
+  count: numberOfFilm,
+  movies: {},
+  actors: {},
+  genres: [],
+  privat: false
+}
+
+start()
+rememberMyFilms()
+detectPersonalLevel()
+
+    function start () {
+      while(numberOfFilm == '' || numberOfFilm == null || isNaN(numberOfFilm)) {
+      numberOfFilm = +prompt('Сколько фильмов Вы уже посмотрели?')
+      }
+    }
+
+function rememberMyFilms () {
+  for (let i = 0; i < 2; i++ ) {
+    const l  = prompt('Один из последних просмотренных фильмов?', ''),
+          r  = +prompt('На сколько оцените его?', '');
+  
+    if (l != '' && l != null && l.length < 50 && r != '' && r != null) {
+    personalMovieDB.movies[l] = r
+    } else {
+    i--
+    }
+  }
+}
+const count = personalMovieDB.count
+
+function detectPersonalLevel () {
+  switch (true) {
+    case count >= 0 && count < 10:
+      alert('просмотрено довольно мало фильмов')
+      break;
+    case count >= 10 && count <= 30:
+      alert('вы классический зритель')
+      break;
+    case count > 30:
+      alert('вы киноман')
+      break;
+    default:
+      alert('произошла ошибка')
+  
+  }
+}
 
 
-// for (let i = 0; i < 2; i++ ) {
-//   const l  = prompt('Один из последних просмотренных фильмов?', ''),
-//         r  = +prompt('На сколько оцените его?', '');
-
-//   if (l != '' && l != null && l.length < 50 && r != '' && r != null) {
-//   personalMovieDB.movies[l] = r
-//   } else {
-//   i--
-//   }
-// }
-
-// const count = personalMovieDB.count
-
-// switch (true) {
-//   case count >= 0 && count < 10:
-//     alert('просмотрено довольно мало фильмов')
-//     break;
-//   case count >= 10 && count <= 30:
-//     alert('вы классический зритель')
-//     break;
-//   case count > 30:
-//     alert('вы киноман')
-//     break;
-//     default:
-//     alert('произошла ошибка')
-
-// }
 
 
+console.log(personalMovieDB)
+console.log(personalMovieDB)
 
-// console.log(personalMovieDB)
 
 
 
@@ -2623,3 +2638,33 @@ ul.addEventListener('click', event => {
 // calc()
 
 // методы и свойства строк и чисел
+// методы- это вспомогательные функции 
+// свойства - это вспомогательные значения
+
+// const str = 'test'
+// console.log(str.length)
+// console.log(str[2])
+// console.log(str.toUpperCase())
+
+// let fruit = 'some fruit'
+// console.log(fruit.indexOf('fruit'))
+
+// const logg = 'hello world'
+// console.log(logg.slice(6, 11))
+// console.log(logg.slice(0, 5))
+// const film = 'как приручить дракона',
+//     a = film.slice(0, 3),
+//     b = film.slice(4, 13),
+//     c = film.slice(14)
+
+// console.log(`${a} ${b} ${c}`)
+// console.log(`${a} ${b} ${c}`)
+
+// console.log(film.substr(0, 3))
+
+// const num = 12.2
+// console.log(Math.round(num)) // округление до ближайшего целого числа
+
+// const test1 = '12.2px'
+// console.log(parseInt(test1))
+// console.log(parseFloat(test1))
