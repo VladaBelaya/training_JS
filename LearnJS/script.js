@@ -2502,47 +2502,47 @@ ul.addEventListener('click', event => {
 
 // ПРАКТИКА. ЧАСТЬ 1, ЧАСТЬ 2
 
-const numberOfFilm = +prompt('Сколько фильмов Вы уже посмотрели?'),
-    personalMovieDB = {
-      count: numberOfFilm,
-      movies: {},
-      actors: {},
-      genres: [],
-      privat: false
-    }
+// const numberOfFilm = +prompt('Сколько фильмов Вы уже посмотрели?'),
+//     personalMovieDB = {
+//       count: numberOfFilm,
+//       movies: {},
+//       actors: {},
+//       genres: [],
+//       privat: false
+//     }
 
 
-for (let i = 0; i < 2; i++ ) {
-  const l  = prompt('Один из последних просмотренных фильмов?', ''),
-        r  = +prompt('На сколько оцените его?', '');
+// for (let i = 0; i < 2; i++ ) {
+//   const l  = prompt('Один из последних просмотренных фильмов?', ''),
+//         r  = +prompt('На сколько оцените его?', '');
 
-  if (l != '' && l != null && l.length < 50 && r != '' && r != null) {
-  personalMovieDB.movies[l] = r
-  } else {
-  i--
-  }
-}
+//   if (l != '' && l != null && l.length < 50 && r != '' && r != null) {
+//   personalMovieDB.movies[l] = r
+//   } else {
+//   i--
+//   }
+// }
 
-const count = personalMovieDB.count
+// const count = personalMovieDB.count
 
-switch (true) {
-  case count >= 0 && count < 10:
-    alert('просмотрено довольно мало фильмов')
-    break;
-  case count >= 10 && count <= 30:
-    alert('вы классический зритель')
-    break;
-  case count > 30:
-    alert('вы киноман')
-    break;
-    default:
-    alert('произошла ошибка')
+// switch (true) {
+//   case count >= 0 && count < 10:
+//     alert('просмотрено довольно мало фильмов')
+//     break;
+//   case count >= 10 && count <= 30:
+//     alert('вы классический зритель')
+//     break;
+//   case count > 30:
+//     alert('вы киноман')
+//     break;
+//     default:
+//     alert('произошла ошибка')
 
-}
+// }
 
 
 
-console.log(personalMovieDB)
+// console.log(personalMovieDB)
 
 
 
@@ -2589,3 +2589,37 @@ console.log(personalMovieDB)
 //   }
 //   console.log(num)
 // }
+
+//  ФУНКЦИИ
+// function showMessage (text) {
+//   console.log(text)
+//   let num = 20
+// }
+// showMessage('hello')
+// showMessage('hello')
+// showMessage('hello')
+
+// function ret () {
+//   let num = 50
+
+//   return num 
+// }
+
+// const anotherNum = ret()
+
+// console.log(anotherNum)
+
+// const logger = function () {
+//   console.log('hi')
+// }
+
+// logger()
+
+// const calc = (a,b) => a + b 
+// const calc = (a, b) => {
+//   console.log('hi')
+//   return a + b
+// }
+// calc()
+
+// методы и свойства строк и чисел
