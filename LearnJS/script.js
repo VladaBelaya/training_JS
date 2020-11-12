@@ -2531,3 +2531,44 @@ ul.addEventListener('click', event => {
 
 
 // УСЛОВИЯ
+
+
+// if (num < 49) {
+//   console.log('no')
+// } else if (num > 100) {
+//   console.log('no')
+// } else {
+//   console.log('ok')
+// }
+// const num = 50
+
+// num > 49 && num < 100 ? console.log('yes') : console.log('no')
+
+// Циклы
+
+// let num = 50
+
+// // while (num < 55) {
+// //   console.log(num)
+// //   num++
+// // }
+
+// // do {
+// //   console.log(num)
+// //   num++
+// // }
+// // while (num < 55)
+
+// for (num; num < 55; num++) {
+//   if (num == 53) {
+//     break
+//   }
+//   console.log(num)
+// }
+
+// for (num; num < 55; num++) {
+//   if (num == 52) {
+//     continue;
+//   }
+//   console.log(num)
+// }
