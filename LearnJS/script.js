@@ -2500,32 +2500,49 @@ ul.addEventListener('click', event => {
 
 // console.log(isChecked && isClose)
 
-// ПРАКТИКА. ЧАСТЬ 1
+// ПРАКТИКА. ЧАСТЬ 1, ЧАСТЬ 2
 
-// const numberOfFilm = +prompt('Сколько фильмов Вы уже посмотрели?'),
-//     personalMovieDB = {
-//       count: numberOfFilm,
-//       movies: {},
-//       actors: {},
-//       genres: [],
-//       privat: false
-//     }
-// let lastFilm;
-// let  rating; 
+const numberOfFilm = +prompt('Сколько фильмов Вы уже посмотрели?'),
+    personalMovieDB = {
+      count: numberOfFilm,
+      movies: {},
+      actors: {},
+      genres: [],
+      privat: false
+    }
 
 
-// for (let i = 0; i < 2; i++ ) {
-//   lastFilm  = prompt('Один из последних просмотренных фильмов?')
-//   rating  = +prompt('На сколько оцените его?');
-// let a = lastFilm,
-//     b = rating
-//     personalMovieDB.movies[lastFilm] = rating
-//     personalMovieDB.movies[a] = b
-// }
+for (let i = 0; i < 2; i++ ) {
+  const l  = prompt('Один из последних просмотренных фильмов?', ''),
+        r  = +prompt('На сколько оцените его?', '');
+
+  if (l != '' && l != null && l.length < 50 && r != '' && r != null) {
+  personalMovieDB.movies[l] = r
+  } else {
+  i--
+  }
+}
+
+const count = personalMovieDB.count
+
+switch (true) {
+  case count >= 0 && count < 10:
+    alert('просмотрено довольно мало фильмов')
+    break;
+  case count >= 10 && count <= 30:
+    alert('вы классический зритель')
+    break;
+  case count > 30:
+    alert('вы киноман')
+    break;
+    default:
+    alert('произошла ошибка')
+
+}
 
 
 
-// console.log(personalMovieDB)
+console.log(personalMovieDB)
 
 
 
