@@ -2503,7 +2503,9 @@ ul.addEventListener('click', event => {
 // ПРАКТИКА. ЧАСТЬ 1, ЧАСТЬ 2
 
 let numberOfFilm;
-let personalMovieDB = {
+start()
+
+const personalMovieDB = {
   count: numberOfFilm,
   movies: {},
   actors: {},
@@ -2511,9 +2513,12 @@ let personalMovieDB = {
   privat: false
 }
 
-start()
+
 rememberMyFilms()
-detectPersonalLevel()
+showMyDB()
+detectPersonalLevel ()
+writeYourGenres()
+
 
     function start () {
       while(numberOfFilm == '' || numberOfFilm == null || isNaN(numberOfFilm)) {
@@ -2533,17 +2538,17 @@ function rememberMyFilms () {
     }
   }
 }
-const count = personalMovieDB.count
+
 
 function detectPersonalLevel () {
   switch (true) {
-    case count >= 0 && count < 10:
+    case numberOfFilm >= 0 && numberOfFilm < 10:
       alert('просмотрено довольно мало фильмов')
       break;
-    case count >= 10 && count <= 30:
+    case numberOfFilm >= 10 && numberOfFilm <= 30:
       alert('вы классический зритель')
       break;
-    case count > 30:
+    case numberOfFilm > 30:
       alert('вы киноман')
       break;
     default:
@@ -2552,13 +2557,20 @@ function detectPersonalLevel () {
   }
 }
 
+// console.log(personalMovieDB.count)
+
+function showMyDB () {
+  if (personalMovieDB.privat == false) {
+    console.log(personalMovieDB)
+  }
+}
 
 
-
-console.log(personalMovieDB)
-console.log(personalMovieDB)
-
-
+function writeYourGenres () {
+  for (let i = 0; i < 3; i++) {
+    personalMovieDB.genres[i] = prompt(`Ваш любимый жанр под номером ${i + 1}`)
+  }
+}
 
 
 
