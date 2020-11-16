@@ -192,3 +192,15 @@ function delTask(e) {
 }
 
 ul.addEventListener('click', delTask)
+
+
+// callback-fanction
+
+function learnJS(lang, callback) {
+  console.log(`i learn ${lang}`)
+  callback()
+}
+
+learnJS('JS', function() {
+  console.log(1)
+})
