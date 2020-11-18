@@ -58,82 +58,77 @@
 
 
 
-// ПРАКТИКА. ЧАСТЬ 1, ЧАСТЬ 2
+// ПРАКТИКА. ЧАСТЬ 1, ЧАСТЬ 2, ЧАСТЬ 3 И 4
 
-// let numberOfFilm;
-// start()
-
-// const personalMovieDB = {
-//   count: numberOfFilm,
-//   movies: {},
-//   actors: {},
-//   genres: [],
-//   privat: false
-// }
-
-
-// rememberMyFilms()
-// showMyDB()
-// detectPersonalLevel ()
-// writeYourGenres()
-
-
-//     function start () {
-//       while(numberOfFilm == '' || numberOfFilm == null || isNaN(numberOfFilm)) {
-//       numberOfFilm = +prompt('Сколько фильмов Вы уже посмотрели?')
-//       }
-//     }
-
-// function rememberMyFilms () {
-//   for (let i = 0; i < 2; i++ ) {
-//     const l  = prompt('Один из последних просмотренных фильмов?', ''),
-//           r  = +prompt('На сколько оцените его?', '');
-  
-//     if (l != '' && l != null && l.length < 50 && r != '' && r != null) {
-//     personalMovieDB.movies[l] = r
-//     } else {
-//     i--
-//     }
-//   }
-// }
-
-
-// function detectPersonalLevel () {
-//   switch (true) {
-//     case numberOfFilm >= 0 && numberOfFilm < 10:
-//       alert('просмотрено довольно мало фильмов')
-//       break;
-//     case numberOfFilm >= 10 && numberOfFilm <= 30:
-//       alert('вы классический зритель')
-//       break;
-//     case numberOfFilm > 30:
-//       alert('вы киноман')
-//       break;
-//     default:
-//       alert('произошла ошибка')
-  
-//   }
-// }
-
-// // console.log(personalMovieDB.count)
-
-// function showMyDB () {
-//   if (personalMovieDB.privat == false) {
-//     console.log(personalMovieDB)
-//   }
-// }
-
-
-// function writeYourGenres () {
-//   for (let i = 0; i < 3; i++) {
-//     personalMovieDB.genres[i] = prompt(`Ваш любимый жанр под номером ${i + 1}`)
-//   }
-// }
+const personalMovieDB = {
+  count: 0,
+  movies: {},
+  actors: {},
+  genres: [],
+  privat: false,
+  start: function() {
+    while(personalMovieDB.count == '' || personalMovieDB.count == null || isNaN(personalMovieDB.count)) {
+      personalMovieDB.count = +prompt('Сколько фильмов Вы уже посмотрели?')
+      }
+  },
+  rememberMyFilms: function() {
+    for (let i = 0; i < 2; i++ ) {
+      const l  = prompt('Один из последних просмотренных фильмов?', ''),
+            r  = +prompt('На сколько оцените его?', '');
+        
+      if (l != '' && l != null && l.length < 50 && r != '' && r != null) {
+        personalMovieDB.movies[l] = r
+      } else {
+          i--
+        }
+    }
+  },
+  showMyDB: function() {
+    if (personalMovieDB.privat == false) {
+          console.log(personalMovieDB)
+        }
+  },
+  detectPersonalLevel: function() {
+    switch (true) {
+      case personalMovieDB.count >= 0 && personalMovieDB.count < 10:
+        alert('просмотрено довольно мало фильмов')
+        break;
+      case personalMovieDB.count >= 10 && personalMovieDB.count <= 30:
+        alert('вы классический зритель')
+        break;
+      case personalMovieDB.count > 30:
+        alert('вы киноман')
+        break;
+      default:
+        alert('произошла ошибка')
+    }
+  },
+  writeYourGenres: function() {
+    for (let i = 0; i < 3; i++) {
+      let genre = prompt(`Ваш любимый жанр под номером ${i + 1}`)
+      if (genre == '' || genre == null) {
+        console.log('вы не ввели данные')
+        i--
+      } else {
+        personalMovieDB.genres[i] = genre
+        }
+    }
+    personalMovieDB.genres.forEach((item, i) =>{
+      console.log(`Любимый жанр ${i + 1} это ${item}`)
+    })
+  },
+  toggleVisibleMyDB: () => {
+    if (personalMovieDB.privat) {
+      personalMovieDB.privat = false
+    } else {
+      personalMovieDB.privat = true
+    }
+  }
+}
 
 
 
-
-
+   
 // to do list
 
 const data = [
@@ -349,13 +344,13 @@ ul.addEventListener('click', delTask)
 // }
 // const newObj = {...q}
 
-const soldier = {
-  health: 400,
-  armor: 100,
-  sayHello: function() {
-    console.log('hello')
-  }
-}
-const john = Object.create(soldier)
+// const soldier = {
+//   health: 400,
+//   armor: 100,
+//   sayHello: function() {
+//     console.log('hello')
+//   }
+// }
+// const john = Object.create(soldier)
 
-john.sayHello()
+// john.sayHello()
