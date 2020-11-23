@@ -126,67 +126,67 @@ const personalMovieDB = {
   }
 }
 
-console.log('hi')
+
 
    
 // to do list
 
-const data = [
-  {task: 'Сгенерировать проект', status: true, createDate: '16.10.2020'},
-  {task: 'Создать компоненты', status: true, createDate: '16.10.2020'},
-  {task: 'Описать роутинг', status: true, createDate: '16.10.2020'},
-  {task: 'Завершить приложение', status: false, createDate: '16.10.2020'},
-]
+// const data = [
+//   {task: 'Сгенерировать проект', status: true, createDate: '16.10.2020'},
+//   {task: 'Создать компоненты', status: true, createDate: '16.10.2020'},
+//   {task: 'Описать роутинг', status: true, createDate: '16.10.2020'},
+//   {task: 'Завершить приложение', status: false, createDate: '16.10.2020'},
+// ]
 
-const input = document.querySelector('#input')
-const ul = document.querySelector('ul')
-const btn = document.querySelector('button')
-const checkbox = document.querySelector('#checkbox')
-let strData = ''
+// const input = document.querySelector('#input')
+// const ul = document.querySelector('ul')
+// const btn = document.querySelector('button')
+// const checkbox = document.querySelector('#checkbox')
+// let strData = ''
 
 
-function render(arr) {
-  let strData = ''
-  arr.forEach((task, i) => {
-    strData += `
-    <li>
-        <div>${task.task}</div>
-        <div>${task.createDate}</div>
-        <button data-del="${i}">del</button>
-    </li>
-    `
-  }) 
-  ul.innerHTML = strData
-}
-render(data)
+// function render(arr) {
+//   let strData = ''
+//   arr.forEach((task, i) => {
+//     strData += `
+//     <li>
+//         <div>${task.task}</div>
+//         <div>${task.createDate}</div>
+//         <button data-del="${i}">del</button>
+//     </li>
+//     `
+//   }) 
+//   ul.innerHTML = strData
+// }
+// render(data)
 
-function addTask() {
-  if(input.value.trim()){
-  strData = ''
-  const toDo = {
-    task: input.value,
-    status: false,
-    createDate: new Date().toLocaleDateString()
-  }
-  data.push(toDo)
-  ul.insertAdjacentHTML('afterbegin', toDo)
-  render(data)
-  console.log(data)
-  }
-  input.value = ''
-}
+// function addTask() {
+//   if(input.value.trim()){
+//   strData = ''
+//   const toDo = {
+//     task: input.value,
+//     status: false,
+//     createDate: new Date().toLocaleDateString()
+//   }
+//   data.push(toDo)
+//   ul.insertAdjacentHTML('afterbegin', toDo)
+//   render(data)
+//   console.log(data)
+//   }
+//   input.value = ''
+// }
 
-btn.addEventListener('click', addTask)
+// btn.addEventListener('click', addTask)
 
-function delTask(e) {
-  if(e.target.dataset.del) {
-   console.log(e.target)
-   data.splice(e.target.dataset.del, 1)
-   render(data)
-  }
-}
+// function delTask(e) {
+//   if(e.target.dataset.del) {
+//    console.log(e.target)
+//    data.splice(e.target.dataset.del, 1)
+//    render(data)
+//   }
+// }
 
-ul.addEventListener('click', delTask)
+// ul.addEventListener('click', delTask)
 
 
 // callback-fanction
@@ -448,7 +448,21 @@ ul.addEventListener('click', delTask)
 
 
 
+// получение элементов со страницы
 
+// const box = document.getElementById('box');
+// console.log(box);
+
+// const btns = document.getElementsByTagName('button')
+// console.log(btns[2])
+
+// const circles = document.getElementsByClassName('circle')
+// console.log(circles[1])
+
+// const hearts = document.querySelectorAll('.heart')
+// hearts.forEach(item => console.log(item))
+// const oneHeart = document.querySelector('.heart')
+// console.log(oneHeart)
 
 
 
