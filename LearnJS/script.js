@@ -373,4 +373,35 @@ ul.addEventListener('click', delTask)
 
 // console.log(typeof(`https://vk.com/${num}`))
 
-// t
+// to number  в числа
+// 1)
+
+// console.log(typeof(Number('1')))
+// console.log(typeof +'1')
+
+// 3)
+// console.log(parseInt('15px'))
+
+// let answ = +prompt('сколько вам лет?', '')
+
+// to boolean в логические значения
+
+// 1)
+// всегда ложь - 0, '', null, undefined, NaN
+
+// let switcher = null
+
+// if(switcher) {
+//   console.log('working...')
+// }
+
+// switcher = 1
+
+// if(switcher) {
+//   console.log('working...')
+// }
+
+// 2)
+// console.log(!!'')
+
+// Задания с собеседований на понимание основ
