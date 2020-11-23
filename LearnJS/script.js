@@ -126,7 +126,7 @@ const personalMovieDB = {
   }
 }
 
-
+console.log('hi')
 
    
 // to do list
@@ -354,3 +354,23 @@ ul.addEventListener('click', delTask)
 // const john = Object.create(soldier)
 
 // john.sayHello()
+
+// const arr =  [1,2,,,,,]
+
+// // arr.forEach(e => console.log(e))
+// for (let key of arr) {
+//   console.log(key)
+// }
+
+// Динамическая типизация
+
+// to String превратить в строку
+// 1)
+// console.log(typeof(String(4)))
+// 2) конкотинация - сложение строки с чем либо (получается строка)
+// console.log(5 + '1')
+// const num = 5
+
+// console.log(typeof(`https://vk.com/${num}`))
+
+// t
