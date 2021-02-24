@@ -3,8 +3,6 @@
                                           результата + React.
       Также выполняю задачи из онлайн-учебника learn.javascript(https://learn.javascript.ru/)
                                    Ссылки на практические занятия:
- https://vladabelaya.github.io/training_JS1/Food/dist/ -проект, в котором отрабатываем теорию по JS.
- Создали табы, таймер, далее будут модалки, взаимодействие скарточками, слайдер и др.
  
 https://vladabelaya.github.io/training_JS1/ScriptsMy/ - здесь создали простую анимацию 
 
